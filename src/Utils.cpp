@@ -2,6 +2,7 @@
 #include "Utils.hpp"
 #include <fstream>
 #include <iostream>
+#include <random>
 
 std::vector<std::string> Utils::readWordsFromFile(std::string& ubication){
     //variables
@@ -24,4 +25,21 @@ std::vector<std::string> Utils::readWordsFromFile(std::string& ubication){
     file.close();
     
     return wordsVec;
+}
+
+void Utils::randomizeWordsOrd(std::vector<std::string>& wordsVec){
+    //variables
+    int rdmNum;
+    
+    //creator of random number    
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::uniform_int_distribution<> dis(0,99999);
+
+    //cycle to swap words and randomize order
+    for (int i = 0; i < wordsVec.size()-1 ; i++)
+    {
+        rdmNum = dis(gen);
+        std::swap(wordsVec[i], wordsVec[rdmNum]);
+    }
 }

@@ -16,5 +16,6 @@ public:
 
     //methods
     static std::vector<std::string> readWordsFromFile(std::string& ubication);
+    static void randomizeWordsOrd(std::vector<std::string>& wordsVec);
 };
 
