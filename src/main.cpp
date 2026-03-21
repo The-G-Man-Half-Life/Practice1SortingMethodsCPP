@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Utils.hpp"
 #include "QuickSort.hpp"
+#include "HeapSort.hpp"
 
 int main(){
 
@@ -28,7 +29,9 @@ int main(){
         std::cout << intsVec.at(i) << std::endl;
     }   
 
-    intsVec = QuickSort::SortingQuick(intsVec,0,wordsVecSize-1);
+    // intsVec = QuickSort::SortingQuick(intsVec,0,wordsVecSize-1);
+
+    HeapSort::heapingSort(intsVec);
 
     std::cout << "vector despues:" << std::endl;
     for (int i = 0; i < wordsVec.size(); i++)
