@@ -1,14 +1,12 @@
 //include guards
 #pragma once
 
-//includes
+//include of necesary elements
 #include <vector>
-#include <iostream>
 
 class HeapSort
 {
 private:
-    //atributes
 
     //methods in private as these will be used for the heap sort but should not be used externally
 

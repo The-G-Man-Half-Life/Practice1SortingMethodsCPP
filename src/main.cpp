@@ -2,6 +2,7 @@
 #include "Utils.hpp"
 #include "QuickSort.hpp"
 #include "HeapSort.hpp"
+#include "BalancedTree.hpp"
 
 int main(){
 
@@ -12,6 +13,8 @@ int main(){
     std::vector<std::string> wordsVec;
     std::vector<int> intsVec;
     int wordsVecSize;
+    BalancedTree tree;
+    std::vector<int> organizedTreeVector;
     //caling the function to read the file
     
     fileUbication = "data/dataset.txt";
@@ -29,14 +32,21 @@ int main(){
         std::cout << intsVec.at(i) << std::endl;
     }   
 
-    QuickSort::sortingQuick(intsVec);
+    // QuickSort::sortingQuick(intsVec);
 
     // HeapSort::heapingSort(intsVec);
+
+    for (int number : intsVec)
+    {
+        tree.insertNumber(number);
+    }
+    
+    organizedTreeVector = tree.getInorder();
 
     std::cout << "vector despues:" << std::endl;
     for (int i = 0; i < wordsVec.size(); i++)
     {
-        std::cout << intsVec.at(i) << std::endl;
+        std::cout << organizedTreeVector.at(i) << std::endl;
     }
 }
 

@@ -1,16 +1,12 @@
 //include guards
 #pragma once
 
-//importation of required elements
+//include of necessary elements
 #include <vector>
-#include <string>
-
 
 class QuickSort
 {
 private:
-    //atributes
-
     //private methods that will take care of the sorting method by using recursion
 
     /*SortingQuickLR (SortingQuickLeftRight) takes care of receiving the vector and the part where it will sort from
@@ -88,8 +84,6 @@ private:
 
     }
 public:
-    //constructor
-
     /*method that will take care of receiving the vector
     and passing the required parameters to the private methods
     which will apply the recursion and sorting process*/
