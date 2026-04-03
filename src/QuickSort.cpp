@@ -1,7 +1,6 @@
 //#includes
 #include "QuickSort.hpp"
-#include <vector>
-#include <iostream>
+
 
 //methods private
 

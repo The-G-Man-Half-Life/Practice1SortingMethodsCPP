@@ -4,6 +4,7 @@
 //include of necessary elements
 #include <vector>
 #include <string>
+#include <algorithm> //needed to make use of std::max
 
 class BalancedTree
 {

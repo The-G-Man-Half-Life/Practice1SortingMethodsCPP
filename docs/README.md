@@ -72,6 +72,24 @@ Practice1SortingMethodsCPP/
 
 ## Algorithms Implemented
 
+### Utils
+
+**File:** `include/Utils.hpp` · `src/Utils.cpp`
+
+File containing miscellaneous methods that will be implemented for different purposes along the project 
+
+| Method | Responsibility |
+|---|---|
+| `readWordsFromFile(ubication)` | Takes care of reading the entirety of the words inside Dataset.txt |
+| `convertWordsToInts(vectorSize)` | Takes care of creating a new int array based on the amount of elements where each element represents a word |
+| `randomizeWordsOrd(vector, vector Size)` | Swaps elements going from the beggining to the end and using a random number to decide the number that will be that element switched with |
+| `showMenu()` | Takes care of showing the menu so the user knows the avaiblable options and therefore chooses one of those option that will be stored, in case an incorrect input is inserted the menu will be shown again with a warning message |
+| `pauseConsole()` | Takes care of stopping the showing of the menu for a better user experience allowing the user to decide when he wants to chooose another option from the menu |
+
+> `include/Utils.hpp` indicates the methods that will be implemented.
+> `src/Utils.cpp` Contains the logic behind the methods that `include/Utils.hpp` said.
+---
+
 ### QuickSort
 
 **File:** `include/QuickSort.hpp` · `src/QuickSort.cpp`
@@ -80,8 +98,8 @@ Implemented from scratch over a `std::vector<int>`. The pivot is always chosen a
 
 | Method | Responsibility |
 |---|---|
-| `sortingQuick(vector)` | Public entry point; delegates to the recursive method SortingQuickLR|
-| `sortingQuickLR(vec, start, end)` | Recursively sorts left and right sub-arrays, going always in that order|
+| `sortingQuick(vector)` | Public entry point; delegates to the recursive method SortingQuickLR |
+| `sortingQuickLR(vec, start, end)` | Recursively sorts left and right sub-arrays, going always in that order |
 | `partitionate(vec, start, end)` | Rearranges elements using the pivot as reference and returns the pivot's final index |
 
 > `std::sort` and any other built-in sorting function are **not used** as requested in the file.
@@ -136,6 +154,21 @@ struct Node {
 
 > `include/BalancedTree.hpp` indicates the methods that will be implemented.
 > `src/BalancedTree.cpp` Contains the logic behind the methods that `include/BalancedTree.hpp` said.
+---
+
+### main
+
+**File:** `src/main.cpp`
+
+Center of execution where all the other files converge and the final user interact with
+
+| Method | Responsibility |
+|---|---|
+| `executeQuickSort(unorganizedVector)` | This function takes care of calling the QuickSort method and its performance counter so it can print the information that can be obtained out of it |
+| `executeHeapSort(unorganizedVector)` | This function takes care of calling the HeapSort method and its performance counter so it can print the information that can be obtained out of it |
+| `executeBalancedTree(unorganizedVector)` | This function takes care of calling the BalancedTree method and its performance counter so it can print the information that can be obtained out of it  |
+| `main` | This function takes care of obtaining all the words change them into numbers then rearrange them into an unorganizedVector, so later it can show the menu and allow for the execution of the previous sorting methods|
+
 ---
 
 ## Performance Analysis
@@ -252,5 +285,3 @@ Since the original file is alphabetically ordered, the program automatically ran
 ```
 words read  →  converted to integer indices  →  shuffled  →  sorted by each algorithm
 ```
-
-> The dataset file is not included in version control (`.gitignore` excludes `build/`). Place `Dataset.txt` inside the `data/` folder before running.

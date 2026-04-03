@@ -1,6 +1,5 @@
 //Includes
 #include "BalancedTree.hpp"
-#include <algorithm> //need to make use of std::max
 
 //private methods
 

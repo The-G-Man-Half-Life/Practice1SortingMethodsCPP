@@ -4,6 +4,9 @@
 //importation of necessary elements
 #include <vector>
 #include <string>
+#include <fstream>
+#include <iostream>
+#include <random>
 
 
 class Utils
