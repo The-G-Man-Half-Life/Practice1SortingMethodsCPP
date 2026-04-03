@@ -79,20 +79,29 @@ int main(){
     int option;
     bool flag = true;
 
-    //caling the function to read the file
+    //calling the function to read the file
     fileUbication = "data/dataset.txt";
     wordsVec = Utils::readWordsFromFile(fileUbication);
     wordsVecSize = wordsVec.size();
 
+    /*Converting each word into a number to handle easier
+    the data once it needs to be sorted */
     intsVec = Utils::convertWordsToInts(wordsVecSize);
     Utils::randomizeWordsOrd(intsVec,wordsVecSize);
 
+    /*Using a while cycle to simulate the basic characteristics
+    of a menu*/
     while (flag == true){
+        /*Showing the menu once every cycle is done
+        and gathering the option choosen by the user*/
         option = Utils::showMenu();
-        
+        /*Using a switch to choose which case the user chose*/
         switch (option){
         case 1:
+            //Cast of the sorting method and its required info
             executeQuickSort(intsVec);
+            /*Usar of pauseConsole to give a more controled management 
+            for the user to watch the menu and shorting methods*/
             Utils::pauseConsole();
             break;
         case 2:
@@ -104,6 +113,7 @@ int main(){
             Utils::pauseConsole();
             break;
         case 4:
+            //Option which will be used to stop the menu and end the cycle
             std::cout << "Adios" << std::endl;
             flag = false;
             break;

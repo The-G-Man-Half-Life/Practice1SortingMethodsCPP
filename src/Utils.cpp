@@ -100,7 +100,7 @@ int Utils::showMenu(){
     }
 }
 
-// Auxiliar function to clean the console
+// Auxiliar function to stop the function and continue in a more clean way
 void Utils::pauseConsole() {
     std::cout << "\nPresione Enter para continuar...";
     // Cleans any rests from std::cin >> option
